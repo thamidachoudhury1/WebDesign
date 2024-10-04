@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #31d2c5;
+    margin: 0;
+    padding: 20px;
+    font-size: 25px;
+}
+
+h1, p, a {
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Flexbox for Card Section */
+.card {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(53, 15, 221, 0.1);
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 100%;
+    flex-wrap: wrap; /*The elements wrap on smaller screens */
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.text-content {
+    text-align: left;
+}
+
+.intro {
+    font-style: italic;
+    color: gray;
+    margin: 0;
+    font-size: 25px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Grid Structure for About Me Section */
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(53, 15, 221, 0.1);
+    max-width: 100%;  /* Allow it to extend across the screen */
+    margin-top: 20px;
+    text-align: left;
+}
+
+.about-me h1 {
+    grid-column: span 2; /* Heading takes up the full width */
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Button Section */
+.my-interests-button {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(53, 15, 221, 0.1);
+    max-width: 100%;  /* Allow it to extend across the screen */
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.my-interests-button a {
+    font-size: 25px; 
+}
+
+.my-interests-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet View */
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .avatar {
+        margin-bottom: 10px;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        max-width: 100%;
+    }
+
+    .my-interests-button {
+        max-width: 100%; /*full width on smaller screens as well */
+    }
+
+    .my-interests-button:hover {
+        background-color: black;
+        color: white;
+    }
+}
+
+/* Mobile View */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-me h1 {
+        font-size: 24px;
+    }
+}
